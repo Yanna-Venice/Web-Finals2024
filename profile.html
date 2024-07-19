@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="footer.png" alt="Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="profile-sections">
+            <div class="profile-card" id="view-profile">
+                <h3>View Profile</h3>
+                <p><strong>Name:</strong> <span id="profile-name">John Doe</span></p>
+                <p><strong>Email:</strong> <span id="profile-email">john.doe@example.com</span></p>
+                <p><strong>Username:</strong> <span id="profile-username">johndoe</span></p>
+            </div>
+            <div class="profile-card" id="edit-profile">
+                <h3>Edit Profile</h3>
+                <form id="profile-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <button type="button" onclick="updateProfile()">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <img src="footer.png" alt="Logo" class="logo">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="fb.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="ig.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="twitter.png" alt="Twitter">
+            </a>
+            <p>Email: 202310331@fit.edu.ph</p>
+        </div>
+    </footer>
+    
+    <script>
+        function updateProfile() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const username = document.getElementById('username').value;
+
+            if (name) {
+                document.getElementById('profile-name').textContent = name;
+            }
+            if (email) {
+                document.getElementById('profile-email').textContent = email;
+            }
+            if (username) {
+                document.getElementById('profile-username').textContent = username;
+            }
+        }
+    </script>
+</body>
+</html>
